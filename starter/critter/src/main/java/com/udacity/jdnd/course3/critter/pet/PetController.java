@@ -46,6 +46,16 @@ public class PetController {
         return petDTOs;
     }
 
+    //TODO: Suggestions to enhance this project and make it stand out!
+/**
+    1) Add additional validations. Can you prevent requests from creating invalid schedules? Avoid detached Pets with no owners?
+    2) It may be possible to replace some or all DTOs by using JSONView and JSONIgnore annotations. Can you replace the DTO objects without compromising encapsulation between the data layer and the controller layer? Watch out for lazy loading of collections!
+    3) Add support for custom behaviors for Pets, or maybe a way to specify which activities are relevant to which type of pet. Can you implement this solution in a way that allows you to add new pets or change pet behavior without modifying code each time?
+    4) Create new endpoints that complete the rest of the missing CRUD operations and support them on the back end. Or come up with additional data about your Entities that may be relevant and write queries to reference it.
+    5) Add support for Schedules that include a startTime and endTime. Add a query that can find an open employee for a specific timeslot during the day.
+*/
+
+
     private PetDTO convertPetToPetDTO(Pet pet) {
         PetDTO petDTO = new PetDTO();
         BeanUtils.copyProperties(pet, petDTO);
