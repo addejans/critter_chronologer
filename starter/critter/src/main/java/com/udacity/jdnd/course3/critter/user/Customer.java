@@ -22,7 +22,6 @@ public class Customer {
     @Column(length = 500)
     private String notes;
 
-    //TODO: first two entries vs. last two entries.
     //TODO: review targetEntity and mappedBy
     @OneToMany(targetEntity = Pet.class, cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "customer")
     private List<Pet> pets;
