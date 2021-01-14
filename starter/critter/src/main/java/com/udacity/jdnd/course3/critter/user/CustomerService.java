@@ -15,6 +15,10 @@ public class CustomerService {
     @Autowired
     CustomerRepository customerRepository;
 
+    public Customer getCustomerById(Long ownerId){
+        return customerRepository.getOne(ownerId);
+    }
+
     public List<Customer> getAllCustomers() {
         return customerRepository.findAll();
     }

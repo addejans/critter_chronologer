@@ -12,6 +12,8 @@ import java.util.List;
 @Transactional
 public class PetService {
 
+    //TODO: Prefer constructor injection to field injection
+    //      https://reflectoring.io/constructor-injection/
     @Autowired
     PetRepository petRepository;
 
